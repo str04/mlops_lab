@@ -11,7 +11,7 @@ import joblib
 import json
 
 
-df = pd.read_csv("Telecom_Tower_Failure_Dataset_10000-1.csv")
+df = pd.read_csv("mlops_l1/Telecom_Tower_Failure_Dataset_10000-1.csv")
 df.head()
 
 x = df.drop(['Tower_ID', 'Failure_Within_48Hrs'], axis=1)
