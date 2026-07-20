@@ -11,6 +11,10 @@ phases:
     commands:
       - python mlops_l1/mlops_l1.py
 
+  post_build:
+    commands:
+      - aws s3 cp mlops_l1/telecom_tower_failure_model.pkl s3://telecom-mlops-model-storage5/
+
 artifacts:
   files:
     - mlops_l1/telecom_tower_failure_model.pkl
